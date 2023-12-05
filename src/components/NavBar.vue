@@ -2,7 +2,7 @@
     <nav
         class="navbar lg:container mx-auto p-7 flex justify-between relative z-10"
     >
-        <div class="min-w-[200px] w-1/4">
+        <div class="min-w-[120px] sm:min-w-[200px] w-1/4 align-self-center">
             <img alt="Stream Vibe logo" src="@/assets/imgs/logo.png" />
         </div>
         <ul
@@ -31,10 +31,10 @@
             </li>
         </ul>
         <div
-            class="p-2 px-4 flex justify-center align-center bg-black-60 border-4 border-black-120 rounded-[12px]"
+            class="p-2 flex justify-center align-center bg-black-100 border-4 border-black-150 rounded-[12px]"
             v-if="$vuetify.display.mobile"
         >
-            <Bars3BottomRightIcon class="w-6" />
+            <Bars3BottomRightIcon class="w-6 sm:w-8" />
         </div>
     </nav>
 </template>
