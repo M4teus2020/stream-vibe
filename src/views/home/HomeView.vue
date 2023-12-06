@@ -12,7 +12,7 @@
                 />
             </div>
             <img
-                class="absolute w-full h-full h-[500px] md:h-[600px] lg:h-[800px] blend"
+                class="absolute w-full h-[500px] md:h-[600px] lg:h-[800px] blend"
                 src="@/assets/imgs/background.png"
             />
             <div
@@ -51,6 +51,39 @@
             >
                 <PlayIcon class="w-6" /> Start Watching Now
             </button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>Explore our wide variety of categories</p>
+            <p>
+                Whether you're looking for a comedy to make you laugh, a drama
+                to make you think, or a documentary to learn something new
+            </p>
+        </div>
+        <div>
+            <div class="flex gap-10">
+                <div
+                    v-for="category in [
+                        'action',
+                        'adventure',
+                        'comedy',
+                        'drama',
+                        'horror',
+                    ]"
+                    :key="category"
+                >
+                    <div class="grid grid-cols-2">
+                        <img
+                            v-for="i in 4"
+                            :src="
+                                require(`@/assets/imgs/movies/${category} (${i}).png`)
+                            "
+                            :key="i"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
